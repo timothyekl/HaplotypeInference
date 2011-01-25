@@ -72,6 +72,7 @@ public class HISolver {
 		for(Genotype genotype : genotypes) {
 			for(int i = 0; i < haplotypes.size(); i++) {
 				for(int j = i + 1; j < haplotypes.size(); j++) {
+					//System.out.println("generatesAll: checking " + haplotypes.get(i) + " + " + haplotypes.get(j) + " == " + genotype);
 					if(haplotypes.get(i).combineWith(haplotypes.get(j)).equals(genotype)) {
 						generated.add(genotype);
 						continue;

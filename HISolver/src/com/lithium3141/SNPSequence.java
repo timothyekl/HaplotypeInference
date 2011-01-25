@@ -43,13 +43,14 @@ public class SNPSequence {
 	@Override
 	public String toString() {
 		if(this.snps.length == 0) {
-			return "";
+			return "<>";
 		}
 		
-		String ret = "" + this.snps[0];
+		String ret = "<" + this.snps[0];
 		for(int i = 1; i < this.snps.length; i++) {
 			ret += " " + this.snps[i];
 		}
+		ret += ">";
 		return ret;
 	}
 	
