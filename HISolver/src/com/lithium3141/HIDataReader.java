@@ -22,7 +22,7 @@ public class HIDataReader {
 		}
 	}
 	
-	public List<Genotype> readData() {
+	public List<Genotype> readData() throws Exception {
 		String line = null;
 		ArrayList<Genotype> list = new ArrayList<Genotype>();
 		
