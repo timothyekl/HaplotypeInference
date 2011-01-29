@@ -40,6 +40,24 @@ public class SNPSequence {
 		}
 	}
 	
+	/**
+	 * Return the difference of this SNPSequence with the given sequence.
+	 * @param seq The sequence to subtract.
+	 * @return A new SNPSequence with SNPs that are the result of subtracting
+	 * those in the given sequence from this sequence's.
+	 */
+	public SNPSequence subtract(SNPSequence seq) {
+		if(seq.snps.length != this.snps.length) {
+			return null;
+		}
+		
+		int[] newSNPs = new int[this.snps.length];
+		for(int i = 0; i < this.snps.length; i++) {
+			newSNPs[i] = this.snps[i] - seq.snps[i];
+		}
+		return new SNPSequence(newSNPs);
+	}
+	
 	@Override
 	public String toString() {
 		if(this.snps.length == 0) {
