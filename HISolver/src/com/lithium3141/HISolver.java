@@ -118,7 +118,12 @@ public class HISolver {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		HIDataReader dr = new HIDataReader("../HapData.txt");
+		if(args.length != 1) {
+			System.err.println("Please provide an input file");
+			System.exit(1);
+		}
+		
+		HIDataReader dr = new HIDataReader(args[0]);
 		List<Genotype> genotypes = dr.readData();
 		
 		Haplotype trent = mostCommon(genotypes);

@@ -2,3 +2,8 @@
 .metadata
 HISolver/bin
 
+HaplotypeInference.aux
+HaplotypeInference.log
+HaplotypeInference.pdf
+HaplotypeInference.pyg
+HaplotypeInference.synctex.gz
